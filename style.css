@@ -1,0 +1,51 @@
+<!-- index.php -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Employee Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h2>New Employee Details</h2>
+
+  <!-- This includes your PHP logic -->
+  <?php include 'insert.php'; ?>
+
+  <form id="employeeForm" method="POST" action="insert.php">
+    <fieldset>
+      <legend>Personal Information</legend>
+      <input name="first_name" placeholder="First Name" required>
+      <input name="last_name" placeholder="Last Name" required>
+      <input name="gender" placeholder="Gender">
+      <input name="dob" type="date" placeholder="Date of Birth">
+      <input name="address" placeholder="Address">
+      <input name="phone" placeholder="Phone Number">
+      <input name="email" type="email" placeholder="Email">
+    </fieldset>
+
+    <fieldset>
+      <legend>Position Information</legend>
+      <input name="employee_id" placeholder="Employee ID" required>
+      <input name="job_title" placeholder="Job Title">
+      <input name="department" placeholder="Department">
+      <input name="supervisor" placeholder="Supervisor">
+      <input name="employee_type" placeholder="Employee Type">
+    </fieldset>
+
+    <form id="myForm">
+  <input type="text" name="user">
+  <button type="submit"><li><a href="submit.html">sumit</a></li></button>
+</form>
+
+<script>
+  document.getElementById("myForm").addEventListener("submit", function(e) {
+    e.preventDefault(); // Stop default form submit
+    window.location.href = "nextpage.html"; // Go to next page
+  });
+</script>
+
+
+</body>
+</html>
